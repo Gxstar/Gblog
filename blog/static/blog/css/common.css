@@ -1,0 +1,83 @@
+.show-comments{
+    border-top: 1px solid #cecece;
+    padding: 0px 15px;
+    font-size: 0.85rem;
+    color:#666;
+}
+.com{
+    margin: 10px auto 15px;
+    border: 1px solid #d4d4d4;
+    border-radius: 10px;
+    padding:5px 0;
+    line-height: 1.5;
+}
+.com p{
+    margin: 5px 10px;
+}
+.com-author{
+    border-bottom: 1px dashed gray;
+    display: flex;
+    justify-content: space-between;
+}
+#page-zone li{
+    cursor: pointer;
+}
+/* 文章区域 */
+.markdown-body figcaption{
+    color: #999;
+    font-size: .85rem;
+    line-height: 1;
+    font-weight: 700;
+    margin: 10px auto 15px;
+    text-align: center;
+}
+.markdown-body figure>a:hover{
+    text-decoration: none;
+}
+.markdown-body figure img{
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    padding: 5px;
+}
+.markdown-body .toc{
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    padding-top: 10px;
+    background-color: #f3f5f7;
+    margin-bottom: 1rem;
+}
+.markdown-body .toc ul{
+    list-style-type: none;
+}
+.markdown-body .toc a{
+    color: black;
+}
+/* 评论撰写区 */
+.new-comment{
+    font-size: 1rem;
+    color:#666;
+    padding: 15px;
+    border-top:1px solid #cecece;
+}
+.form-group{
+    padding:5px;
+}
+.form-group>label{
+    display: block;
+    line-height: 1.5;
+}
+.form-group>input,.form-group>textarea{
+    line-height: 1.75;
+    border: 1px solid gray;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+.form-group>input:focus,.form-group>textarea:focus{
+    border: 1px solid var(--blue);
+    outline: 0;
+    box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25);
+}
+#c-body{
+    width: 100%;
+    height:6rem;
+}

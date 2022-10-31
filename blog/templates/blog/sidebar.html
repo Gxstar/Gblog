@@ -1,0 +1,18 @@
+{% load static %}
+<!-- 文章分类插件 -->
+<div class="slide">
+    <div class="cat inner-box" id="cat-list">
+        <div class="header">
+            <p style="color:#999;">文章分类</p>
+        </div>
+        <ul class="cat-list">
+            {% for cat in cats %}
+            <a href="/blog/?catid={{cat.id}}&page=1">
+                <li>
+                    <p>{{cat.name}}</p><i>{{cat.count}}</i>
+                </li>
+            </a>
+            {% endfor %}
+        </ul>
+    </div>
+</div>

@@ -14,8 +14,18 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include, re_path
+from django.conf.urls.static import static
+from django.conf import settings
+from django.views.static import serve
+from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.show_home),
+    path('blog/', include('blog.urls')),
+    path('mdeditor/', include('mdeditor.urls')),
+    path('captcha/', include('captcha.urls')),
+    re_path(r'^uploads/(?P<path>.*)$', serve,
+            {"document_root": settings.MEDIA_ROOT}),
 ]
